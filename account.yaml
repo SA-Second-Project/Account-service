@@ -18,14 +18,14 @@ spec:
           image: leo/account
           ports:
             - containerPort: 9091
-          env:   # Setting Environmental Variables
-            - name: DB_HOST   # Setting Database host address
+          env:
+            - name: DB_HOST
               value: accountDB
-            - name: DB_NAME  # Setting Database name
+            - name: DB_NAME
               value: account
-            - name: DB_USERNAME  # Setting Database username
+            - name: DB_USERNAME
               value: root
-            - name: DB_PASSWORD # Setting Database password
+            - name: DB_PASSWORD
               value: root
 ---
 apiVersion: v1
