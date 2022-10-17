@@ -20,7 +20,6 @@ public class AccountController {
     private AccountService accountService;
 
 
-    // Get all accounts
     @GetMapping()
     public ResponseEntity<?> getAll() {
         List<Account> accounts = accountService.findAll();
@@ -31,7 +30,6 @@ public class AccountController {
         return accountService.checkUser(authenticateRequest.getUsername(),authenticateRequest.getPassword());
     }
 
-    //Get account by id
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
         Optional<Account> account = accountService.findById(id);
